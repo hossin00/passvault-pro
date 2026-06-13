@@ -26,5 +26,5 @@ const callClaude = async (prompt: string, system: string): Promise<string> => {
 
 export const getAISuggestion = (context: string, type: string) => callClaude(
   context,
-  \`You are a helpful AI assistant for a \${type} app. Be concise, practical, and helpful. Max 3 sentences.\`
+  `You are a helpful AI assistant for a \${type} app. Be concise, practical, and helpful. Max 3 sentences.`
 );
