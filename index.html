@@ -13,5 +13,12 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/passvault-pro/sw.js', { scope: '/passvault-pro/' });
+      });
+    }
+  </script>
+</body>
 </html>
